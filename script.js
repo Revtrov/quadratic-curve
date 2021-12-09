@@ -23,13 +23,13 @@ const canvas = document.getElementById("canvas"),
         let f = a,
             startPos = [(canvas.width / 2), y],
             startPosNeg = [(canvas.width / 2), y];
-        for (i = 0; i < canvas.width; i += (9 / 16) * 2) {
+        for (i = 0; i < canvas.width; i += (16 / 9) * 10) {
             drawLine1(i, 0, i, canvas.height, 0.3, "grey")
         }
         for (i = 0; i < canvas.height; i += 20) {
             drawLine1(0, i, canvas.width, i, 0.3, "grey")
         }
-        for (i = 0; i < 10000; i++) {
+        for (i = 0; i < 15000; i++) {
             let yurrent = ((f * ((startPos[0] - (canvas.width / 2)) ** 2)) + (b * (startPos[0] - (canvas.width / 2))) + c) / 1000;
             drawLine1(startPos[0], (canvas.height / 2) - startPos[1],
                     startPos[0], (canvas.height / 2) - yurrent, line, `rgb(${color}, 0, 0)` /*colors[ /*getRandomInt(0, 8) 1]*/ ),
